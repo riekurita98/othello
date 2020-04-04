@@ -16,6 +16,8 @@ empty = 0
 black = 1
 white = 2
 
+# ii
+
 class Othello:
     def __init__(self):
         self.state = game_state.GameState()
@@ -65,4 +67,6 @@ def main():
     game.run()
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
     main()
